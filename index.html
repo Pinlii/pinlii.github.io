@@ -1,10 +1,98 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>你好，GitHub</title>
-  </head>
-  <body>
-    <h1>覺得厲害</h1>
-  </body>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPS 位置追蹤（OSM 版）</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        let map, marker;
+
+        function initMap(latitude = 25.0330, longitude = 121.5654) {
+            map = L.map('map').setView([latitude, longitude], 15);
+
+            // 使用 OpenStreetMap 圖資
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+
+            // 加入標記
+            marker = L.marker([latitude, longitude]).addTo(map)
+                .bindPopup("你的位置")
+                .openPopup();
+        }
+
+        function updateLocation(position) {
+            let latitude = position.coords.latitude;
+            let longitude = position.coords.longitude;
+
+            // 更新網頁上的資訊
+            document.getElementById("latitude").textContent = latitude;
+            document.getElementById("longitude").textContent = longitude;
+
+            // 更新地圖和標記
+            if (!map) {
+                initMap(latitude, longitude);
+            } else {
+                map.setView([latitude, longitude], 15);
+                marker.setLatLng([latitude, longitude]);
+            }
+
+            // 获取设备和浏览器信息
+            let deviceInfo = navigator.userAgent;
+
+            // 傳送數據到 PHP 伺服器
+            let data = new FormData();
+            data.append('latitude', latitude);
+            data.append('longitude', longitude);
+            data.append('device_info', deviceInfo);  // 发送设备和浏览器信息
+
+            fetch('gps_logger.php', {
+                method: 'POST',
+                body: data
+            })
+            .then(response => response.json())
+            .then(result => {
+                console.log("伺服器回應:", result);
+                document.getElementById("status").textContent = result.message;
+                document.getElementById("device_info").textContent = deviceInfo;  // 顯示裝置/瀏覽器信息
+            })
+            .catch(error => {
+                console.error('錯誤:', error);
+                
+                // 顯示具體的錯誤信息
+                let errorMessage = `錯誤類型: ${error.name}, 錯誤信息: ${error.message}`;
+                
+                // 如果有 stack 信息，顯示堆疊追蹤
+                if (error.stack) {
+                    errorMessage += `<br>堆疊追蹤: ${error.stack}`;
+                }
+                
+                document.getElementById("status").innerHTML = `傳輸失敗<br>${errorMessage}`;
+            });
+        }
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(updateLocation, error => {
+                    console.error("定位失敗:", error);
+                    document.getElementById("status").textContent = "無法獲取位置";
+                }, { enableHighAccuracy: true });
+            } else {
+                console.error("此瀏覽器不支援地理定位");
+                document.getElementById("status").textContent = "此瀏覽器不支援 GPS";
+            }
+        }
+    </script>
+</head>
+<body onload="getLocation()">
+    <h1>GPS 位置追蹤（OSM 版）</h1>
+    <p><strong>緯度:</strong> <span id="latitude">獲取中...</span></p>
+    <p><strong>經度:</strong> <span id="longitude">獲取中...</span></p>
+    <p><strong>狀態:</strong> <span id="status">等待中...</span></p>
+    <p><strong>裝置/瀏覽器:</strong> <span id="device_info">等待中...</span></p> <!-- 顯示裝置/瀏覽器信息 -->
+
+    <div id="map" style="width: 100%; height: 400px; margin-top: 20px;"></div>
+</body>
 </html>

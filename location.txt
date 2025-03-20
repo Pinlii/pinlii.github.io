@@ -1,0 +1,33 @@
+Timestamp: 2025-03-19 17:15:04, Latitude: 24.1769764, Longitude: 120.6424333
+Timestamp: 2025-03-19 17:15:52, Latitude: 24.1769764, Longitude: 120.6424333
+Timestamp: 2025-03-19 17:15:53, Latitude: 24.1769764, Longitude: 120.6424333
+Timestamp: 2025-03-20 00:17:37, Latitude: 24.1769764, Longitude: 120.6424333
+Timestamp: 2025-03-20 00:25:03, Latitude: 24.1769764, Longitude: 120.6424333
+Timestamp: 2025-03-20 00:26:39, Latitude: 24.1769764, Longitude: 120.6424333
+Timestamp: 2025-03-20 00:28:07, Latitude: 24.1769764, Longitude: 120.6424333
+Timestamp: 2025-03-20 00:34:58, Latitude: 24.1769764, Longitude: 120.6424333
+Timestamp: 2025-03-20 00:38:11, Latitude: 24.1769764, Longitude: 120.6424333
+Timestamp: 2025-03-20 00:39:31, Latitude: 24.1769764, Longitude: 120.6424333
+Timestamp: 2025-03-20 00:40:39, Latitude: 24.1769764, Longitude: 120.6424333
+Timestamp: 2025-03-20 00:41:19, Latitude: 24.1769764, Longitude: 120.6424333
+Timestamp: 2025-03-20 00:42:20, Latitude: 24.1769764, Longitude: 120.6424333
+Timestamp: 2025-03-20 00:42:46, Latitude: 24.1769764, Longitude: 120.6424333
+Timestamp: 2025-03-20 00:42:54, Latitude: 24.1769764, Longitude: 120.6424333
+Timestamp: 2025-03-20 00:42:56, Latitude: 24.1769764, Longitude: 120.6424333
+Timestamp: 2025-03-20 00:43:37, Latitude: 24.1769764, Longitude: 120.6424333
+Timestamp: 2025-03-20 00:43:57, Latitude: 24.1769764, Longitude: 120.6424333
+Timestamp: 2025-03-20 00:44:01, Latitude: 24.1769764, Longitude: 120.6424333
+Timestamp: 2025-03-20 00:49:09, Latitude: 24.1769764, Longitude: 120.6424333, Device Info: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+2025-03-20 00:50:26, 緯度: 24.1769764, 經度: 120.6424333, 瀏覽器/裝置資訊: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+2025-03-20 00:51:09, 緯度: 24.1769764, 經度: 120.6424333, 瀏覽器/裝置資訊: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+時間: 2025-03-20 00:51:38, 緯度: 24.1769764, 經度: 120.6424333, 瀏覽器/裝置資訊: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+時間: 2025-03-20 00:51:49, 緯度: 24.1769764, 經度: 120.6424333, 瀏覽器/裝置資訊: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+
+時間: 2025-03-20 00:51:56, 緯度: 24.1769764, 經度: 120.6424333, 瀏覽器/裝置資訊: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+
+時間: 2025-03-20 00:52:07, 緯度: 24.1769764, 經度: 120.6424333, 
+瀏覽器/裝置資訊: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+
+時間: 2025-03-20 06:55:07, 緯度: 24.1769764, 經度: 120.6424333, 
+瀏覽器/裝置資訊: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+
